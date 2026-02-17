@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XcodeTroubleshootingAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,9 @@
                                 <rect key="frame" x="144" y="411" width="126" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter App"/>
+                                <connections>
+                                    <segue destination="yHp-aw-ha6" kind="show" id="Wo5-vb-2SP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -29,14 +32,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57.971014492753625" y="103.79464285714285"/>
+            <point key="canvasLocation" x="-14" y="93"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller2-->
         <scene sceneID="xh5-fb-Y82">
             <objects>
-                <viewController id="yHp-aw-ha6" sceneMemberID="viewController">
+                <viewController id="yHp-aw-ha6" customClass="SecondViewController2" customModule="XcodeTroubleshootingAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L4m-6s-w8L">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="848"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc1-Ey-B3i">
@@ -44,7 +47,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change Color"/>
                                 <connections>
-                                    <action selector="changeColorButtonPressed:" destination="yHp-aw-ha6" eventType="touchUpInside" id="R9q-af-lEa"/>
+                                    <action selector="changeColorButtonPressed:" destination="yHp-aw-ha6" eventType="touchUpInside" id="KEd-8b-3fT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnD-zI-Vte">
@@ -52,7 +55,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change Label Text"/>
                                 <connections>
-                                    <action selector="changeLabelTextButtonPressed:" destination="yHp-aw-ha6" eventType="touchUpInside" id="JVd-WA-FYB"/>
+                                    <action selector="changeLabelTextButtonPressed:" destination="yHp-aw-ha6" eventType="touchUpInside" id="hux-w7-7m1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZZ-oZ-tN7">
@@ -67,7 +70,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="secondButton:" destination="yHp-aw-ha6" eventType="touchUpInside" id="b7A-Tt-X01"/>
+                                    <action selector="secondButtonPressed:" destination="yHp-aw-ha6" eventType="touchUpInside" id="Gec-rS-eb0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLs-ep-Knv">
@@ -75,18 +78,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="firstButton:" destination="yHp-aw-ha6" eventType="touchUpInside" id="6di-CA-pJ4"/>
-                                    <action selector="secondButton:" destination="yHp-aw-ha6" eventType="touchUpInside" id="ann-rK-MSX"/>
+                                    <action selector="firstButtonPressed:" destination="yHp-aw-ha6" eventType="touchUpInside" id="CG1-fL-7ID"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZNq-w1-5TO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9BN-Wa-W7e"/>
+                    <connections>
+                        <outlet property="firstLabel" destination="XZZ-oZ-tN7" id="NK6-Ll-iFK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gio-gN-NKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673.91304347826087" y="103.79464285714285"/>
+            <point key="canvasLocation" x="791" y="92"/>
         </scene>
     </scenes>
     <resources>
